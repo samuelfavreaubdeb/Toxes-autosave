@@ -55,11 +55,11 @@ TD builds > 2023.12370
 
 ## Installation.
 
-Download the latest version from the [Release Page](https://github.com/picturesbyrobots/td-completes-me/releases). Then, place the TOX file at the root of your project. It should automatically detect your external toxes.
+Download the latest version from the [Release Page](https://github.com/samuelfavreaubdeb/Toxes-autosave/releases). Then, place the TOX file at the root of your project. It should automatically detect your external toxes.
 
 ## Tested On
 
-PC.
+PC
 
 ## Release Notes
 
