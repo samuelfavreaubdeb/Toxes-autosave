@@ -12,32 +12,40 @@ When working on bigger and bigger TouchDesigner projects, it can be useful to ut
 
 # Parameters - Toxes Autosave
 
-- ### `Active` - When set to On, the external toxes will be automatically exported on save.
-- ### `Alert on save` - When set to On, a dialog will show up on save to allow you to select the external toxes to export.
+- ### `Active` 
+    - When set to On, the external toxes will be automatically exported on save.
+- ### `Alert on save` 
+    - When set to On, a dialog will show up on save to allow you to select the external toxes to export.
 
 # Operator Inputs
 
-- ### `Input 0` - (optional) A Table containing the name and relative path of all the toxes you want to keep track of. All external toxes will be checked by default.
+- ### `Input 0` 
+    - (optional) A Table containing the name and relative path of all the toxes you want to keep track of. All external toxes will be checked by default.
 
 # Features
 
-- ### When the "Alert on save" parameter is activated, the `Export Toxes dialog` will appear when the project is saved. You will then be able to select the individual toxes you wish to export, or export them all. For a tox to be visible on the list, it's "Enable External .tox" parameter needs to be set to "On" and it needs to have a relative path in it's "Export .tox path" parameter.
+- ### `Export Toxes dialog`
+    - When the "Alert on save" parameter is activated, the "Export Toxes dialog" will appear when the project is saved. You will then be able to select the individual toxes you wish to export, or export them all. For a tox to be visible on the list, it's "Enable External .tox" parameter needs to be set to "On" and it needs to have a relative path in it's "Export .tox path" parameter.
 
 ![Export Toxes Dialog](/src/img/export-toxes.png)
 
-- ### The "Show" button will allow automatically set the home view on the selected Tox.
+- The "Show" button will allow automatically set the home view on the selected Tox.
 
 ![Show Tox](/src/img/show-operator.png)
 
-- ### If you double click on the export path of a tox, you will be able to modify it. The changes made to the dialog will be mirrored on the actual Tox.
+- If you double click on the export path of a tox, you will be able to modify it. The changes made to the dialog will be mirrored on the actual Tox.
 
 ![Edit Tox Path](/src/img/edit-export-path.png)
 
-- ### When two or more toxes with identical export paths are selected, the `Conflict dialog` will appear. With it, you will be able to export only the desired toxes, or edit the export paths in order to export them all without loosing progress.
+
+
+- ### `Conflict dialog`
+    - When two or more toxes with identical export paths are selected, the "Conflict dialog" will appear. With it, you will be able to export only the desired toxes, or edit the export paths in order to export them all without loosing progress.
 
 ![Edit Tox Path](/src/img/conflict.png)
 
-- ### If you wish to reload all of your external toxes, you can press "Ctrl + r" on your keyboard and the `Reload dialog` will appear. You will then be able to select the individual toxes you wish to reload, or reload them all.
+- ### `Reload dialog` 
+    - If you wish to reload all of your external toxes, you can press "Ctrl + r" on your keyboard and the "Reload dialog" will appear. You will then be able to select the individual toxes you wish to reload, or reload them all.
 
 ![Edit Tox Path](/src/img/reload.png)
 
