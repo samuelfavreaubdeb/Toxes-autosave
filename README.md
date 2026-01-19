@@ -18,7 +18,9 @@ When working on bigger and bigger TouchDesigner projects, it can be useful to ut
 
 ### `Alert on save`
 
-- When set to On, a dialog will show up on save to allow you to select the external toxes to export.
+- **"On"** : A dialog will show up on save to allow you to select the external toxes to export.
+- **"Always export all"** : No dialog will show up on save. Every external toxes will be exported.
+- **"Only export modified"** : No dialog will show up on save. Only the external toxes that were modified since the last save will be exported.
 
 # Operator Inputs
 
