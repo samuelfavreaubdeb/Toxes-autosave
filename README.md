@@ -58,7 +58,7 @@ When working on bigger and bigger TouchDesigner projects, it can be useful to ut
 
 ### `Set operator as external`
 
-- If you want to quickly set an operator as an external tox, you can go inside it and press **"Ctrl + Shift + t"** on your keyboard. This command will open a dialog to select your destination folder and will automatically export the operator using it's current name.
+If you want to quickly set an operator as an external tox, you can go inside it and press **"Ctrl + Shift + t"** on your keyboard. This command will open a dialog to select your destination folder and will automatically export the operator using it's current name.
 
 This command will also automatically fill the operator's **"External .tox Path"** parameter with the correct relative path and will set the **"Save Backup of External"** parameter to Off.
 
