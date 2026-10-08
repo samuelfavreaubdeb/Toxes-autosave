@@ -64,7 +64,7 @@ This command will also automatically fill the operator's **"External .tox Path"*
 
 ## Requirments
 
-TD builds > 2023.12370
+TD builds > 2025.32280
 
 ## Installation.
 
@@ -75,6 +75,10 @@ Download the latest version from the [Release Page](https://github.com/samuelfav
 PC
 
 ## Release Notes
+
+### 0.2.0
+
+Updating the operator for TouchDesigner 2025.
 
 ### 0.1.3
 
