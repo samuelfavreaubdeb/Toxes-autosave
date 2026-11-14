@@ -4,39 +4,43 @@
 
 # What is this?
 
-This is a TOX that can be imported inside your TouchDesigner project to ensure that all of your external toxes are exported when your project is saved.
+This is a TOX that can be added to your TouchDesigner project to ensure that all of your external operators ("_toxes_" as I call them) are exported when your project is saved.
 
 ## What problem does this solve?
 
-When working on bigger and bigger TouchDesigner projects, it can be useful to utilise external toxes to make the project more modular. The main problem when using external toxes is that you need to contently remember to re-export your toxes, otherwise, all of your hard work will be lost. This TOX will automatically open a dialog every time the project is saved to allow you to easily export the toxes you've been working on. This way, you won't need to crawl around your project to find all of the toxes that have been modified.
+When working alone or with a team on big TouchDesigner project, it can be useful to utilise external operators to make the project easier to manage. The main problem when using external toxes is that you need to constantly remember to re-export them when saving to not lose all of your work. This TOX will automatically open a dialog every time the project is saved to allow you to easily export the toxes you've been working on. This way, you won't need to look around your project to find all the toxes that were modified.
 
 # Parameters - Toxes Autosave
 
 ### `Active`
 
-- When set to On, the external toxes will be automatically exported on save.
+- When set to On, the external toxes will be exported on save.
 
 ### `Alert on save`
 
 - **"On"** : A dialog will show up on save to allow you to select the external toxes to export.
-- **"Always export all"** : No dialog will show up on save. Every external toxes will be exported.
+- **"Always export all"** : No dialog will show up on save. Every external tox will be exported.
 - **"Only export modified"** : No dialog will show up on save. Only the external toxes that were modified since the last save will be exported.
+
+### `Exclude Paths (relative)`
+
+- Specify a relative path that should be excluded from the search. Multiple paths can be added by separating them with a space.
 
 # Operator Inputs
 
 ### `Input 0`
 
-- (optional) A Table containing the name and relative path of all the toxes you want to keep track of. All external toxes will be checked by default.
+- (optional) A Table containing the names and relative paths of all the toxes you want to keep track of. All external toxes will be checked by default.
 
 # Features
 
 ### `Export Toxes dialog`
 
-- When the **"Alert on save"** parameter is activated, the **"Export Toxes dialog"** will appear when the project is saved. You will then be able to select the individual toxes you wish to export, or export them all. For a tox to be visible on the list, it's "Enable External .tox" parameter needs to be set to "On" and it needs to have a relative path in it's **"Export .tox path"** parameter.
+- When the **"Alert on save"** parameter is on, the **"Export Toxes dialog"** will appear when the project is saved. You will then be able to select the individual toxes you wish to export. For a tox to be visible on the list, its "Enable External .tox" parameter needs to be set to "On" and it needs to have a relative path in its **"Export .tox path"** parameter.
 
 ![Export Toxes Dialog](/src/img/export-toxes.png)
 
-- The **"Show"** button will allow automatically set the home view on the selected Tox.
+- The **"Show"** button will automatically set the home view on the selected Tox.
 
 ![Show Tox](/src/img/show-operator.png)
 
@@ -46,7 +50,7 @@ When working on bigger and bigger TouchDesigner projects, it can be useful to ut
 
 ### `Conflict dialog`
 
-- When two or more toxes with identical export paths are selected, the **"Conflict dialog"** will appear. With it, you will be able to export only the desired toxes, or edit the export paths in order to export them all without loosing progress.
+- When two or more toxes with identical export paths are selected, the **"Conflict dialog"** will appear. With it, you will be able to export only the desired toxes, or edit the export paths in order to export them all without losing progress.
 
 ![Edit Tox Path](/src/img/conflict.png)
 
@@ -58,13 +62,13 @@ When working on bigger and bigger TouchDesigner projects, it can be useful to ut
 
 ### `Set operator as external`
 
-If you want to quickly set an operator as an external tox, you can go inside it and press **"Ctrl + Shift + t"** on your keyboard. This command will open a dialog to select your destination folder and will automatically export the operator using it's current name.
+If you want to quickly set an operator as an external tox, you can go inside it and press **"Ctrl + Shift + t"** on your keyboard. This command will open a dialog to select your destination folder and will automatically export the operator using its current name.
 
 This command will also automatically fill the operator's **"External .tox Path"** parameter with the correct relative path and will set the **"Save Backup of External"** parameter to Off.
 
 ## Requirments
 
-TD builds > 2025.32280
+TD builds > 2025.33070
 
 ## Installation.
 
@@ -75,6 +79,11 @@ Download the latest version from the [Release Page](https://github.com/samuelfav
 PC
 
 ## Release Notes
+
+### 0.2.1
+
+Fixing bug with exported CHOP values.
+Adding "Exclude Paths" input.
 
 ### 0.2.0
 
