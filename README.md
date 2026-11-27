@@ -80,6 +80,10 @@ PC
 
 ## Release Notes
 
+### 0.2.2
+
+Fix bug caused by disabled parameters
+
 ### 0.2.1
 
 Fixing bug with exported CHOP values.
